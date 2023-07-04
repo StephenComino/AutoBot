@@ -24,16 +24,24 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         
+        <!-- Add Action and Image to List-->
         <Button Content="Click Me!" Grid.Column="1" Grid.Row="1" Click="Button_Click" Width="100" Height="100"/>
 
+        <!-- Insert Images-->
         <ListBox Grid.Column="2" Grid.Row="2">
-            <ListBoxItem Content="111" />
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Image />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
 
+        <!-- Selected Actions-->
         <ComboBox Grid.Column="2" Grid.Row="1">
             <ComboBoxItem Content="ClickAction" />
         </ComboBox>
 
+        <!-- Current Sequence of events-->
         <ListBox Grid.Column="2" Grid.Row="3">
             <ListBoxItem Content="Actions Here" />
         </ListBox>
