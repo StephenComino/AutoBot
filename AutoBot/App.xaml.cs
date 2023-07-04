@@ -1,4 +1,5 @@
 ﻿using AutoBot.Services;
+using AutoBot.ViewModels;
 using AutoBot.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -22,6 +23,7 @@ namespace AutoBot
 
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddSingleton<EventBus>();
+            serviceCollection.AddSingleton<MainWindowViewModel>();
             serviceCollection.AddSingleton<TransparentWindow>();
             serviceCollection.AddSingleton<MainWindow>();
             serviceCollection.AddSingleton<ScreenCaptureService>();
